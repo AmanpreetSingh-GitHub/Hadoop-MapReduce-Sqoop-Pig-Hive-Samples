@@ -14,13 +14,13 @@ A high level diagram of the ecosystem is below:
 
 ![](Images/HE/1.png)
 
-Figure 1
+###### Figure 1 ######
 
 A more detailed diagram of the ecosystem is below:
 
 ![](Images/HE/2.png)
 
-Figure 2
+###### Figure 2 ######
 
 In the above figure:
 
@@ -70,7 +70,7 @@ Below figure shows how block ‘a’ is stored in the Hadoop ecosystem.
 
 ![](Images/HE/3.png)
 
-Figure 3
+###### Figure 3 ######
 
 First data is written to *S1-1*, *S1-1* will then store data to *S1-3*. And then *S1-3* will write data to *S2-4*. As soon as the data is written *Slaves* inform the *Name Node*. Once acknowledgment from all 3 *Slaves* is got by *Name Node*, the data is said to be successfully written.
 
@@ -78,7 +78,7 @@ Below figure shows how the file *data.txt* (with blocks a, b, c, d and e) is sto
 
 ![](Images/HE/4.png)
 
-Figure 4
+###### Figure 4 ######
 
 ### How data is processed? ###
 
@@ -113,7 +113,7 @@ Each line from the block will be read and <key, value> pair will be created. See
 
 ![](Images/HE/5.png)
 
-Figure 5
+###### Figure 5 ######
 
 #### Intermediate Processes ####
 
@@ -123,7 +123,7 @@ We will assume to have 2 Reducers (R1 and R2). Using the *Partitioning* decision
 
 ![](Images/HE/6.png)
 
-Figure 6
+###### Figure 6 ######
 
 #### Reduce Phase ####
 
@@ -138,4 +138,4 @@ Reduce method is executed and final output is written to HDFS.
 
 ![](Images/HE/7.png)
 
-Figure 7
+###### Figure 7 ######
