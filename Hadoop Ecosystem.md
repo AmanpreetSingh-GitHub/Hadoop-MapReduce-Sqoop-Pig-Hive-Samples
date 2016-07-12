@@ -12,11 +12,15 @@ Hadoop is an ecosystem that is used to store and process data. Data is stored us
 
 A high level diagram of the ecosystem is below:
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/1.png)
+![](Images/HE/1.png)
+
+Figure 1
 
 A more detailed diagram of the ecosystem is below:
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/2.png)
+![](Images/HE/2.png)
+
+Figure 2
 
 In the above figure:
 
@@ -64,13 +68,17 @@ As *Name Node* has information about Racks, Slaves and their Capacity, it puts t
 
 Below figure shows how block ‘a’ is stored in the Hadoop ecosystem.
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/3.png)
+![](Images/HE/3.png)
+
+Figure 3
 
 First data is written to *S1-1*, *S1-1* will then store data to *S1-3*. And then *S1-3* will write data to *S2-4*. As soon as the data is written *Slaves* inform the *Name Node*. Once acknowledgment from all 3 *Slaves* is got by *Name Node*, the data is said to be successfully written.
 
 Below figure shows how the file *data.txt* (with blocks a, b, c, d and e) is stored in the Hadoop ecosystem:
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/4.png)
+![](Images/HE/4.png)
+
+Figure 4
 
 ### How data is processed? ###
 
@@ -103,7 +111,9 @@ During Map Phase, below happens:
 
 Each line from the block will be read and <key, value> pair will be created. See below:
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/5.png)
+![](Images/HE/5.png)
+
+Figure 5
 
 #### Intermediate Processes ####
 
@@ -111,7 +121,9 @@ After the *Map Phase*, based on the *Partitioning* decision data will be sent to
 
 We will assume to have 2 Reducers (R1 and R2). Using the *Partitioning* decision, *Shuffle* will send Fed, KEI, MURRAY to Reducer1 and NADAL, NOVAL, STAN to Reducer2.
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/6.png)
+![](Images/HE/6.png)
+
+Figure 6
 
 #### Reduce Phase ####
 
@@ -124,4 +136,6 @@ The data is sorted and grouped based on the key and below output is generated. T
 
 Reduce method is executed and final output is written to HDFS.
 
-![](https://github.com/AmanpreetSingh-GitHub/Hadoop/tree/master/Images/HE/7.png)
+![](Images/HE/7.png)
+
+Figure 7
