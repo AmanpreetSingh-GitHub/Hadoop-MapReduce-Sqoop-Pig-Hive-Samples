@@ -1,6 +1,5 @@
 # Hadoop Ecosystem (with MapReduce as YARN Application) – Basics #
 
-----------
 
 ### Hadoop Ecosystem with MapReduce as YARN Application ###
 
