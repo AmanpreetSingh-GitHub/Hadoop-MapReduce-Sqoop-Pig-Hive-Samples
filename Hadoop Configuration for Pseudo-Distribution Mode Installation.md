@@ -154,13 +154,13 @@ Once the key is generated, we need to configure the keys for a password-less sec
 
 	![](Images/HC/22.png)
 
-We get below output after running the command.
+	We get below output after running the command.
 
-![](Images/HC/23.png)
+	![](Images/HC/23.png)
 
-If we check the contents of ~/.ssh, we get known_hosts that lists all the trusted known hosts. See below:
+	If we check the contents of ~/.ssh, we get known_hosts that lists all the trusted known hosts. See below:
 
-![](Images/HC/24.png)
+	![](Images/HC/24.png)
 
 Now ssh is successfully configured.
 
@@ -177,12 +177,12 @@ Now ssh is successfully configured.
 - In the extracted folder hadoop-2.7.1, go to *etc > Hadoop*
 - Edit core-site.xml file and put below configuration. This file contains the *Name Node* configuration like the address and port it runs on
 
->     <configuration>
->        <property> 
->        <name>fs.defaultFS</name> 
->        <value>hdfs://localhost:9000</value> 
->        </property>
->     </configuration>
+	>     <configuration>
+	>        <property> 
+	>        <name>fs.defaultFS</name> 
+	>        <value>hdfs://localhost:9000</value> 
+	>        </property>
+	>     </configuration>
 
 - Edit *hdfs-site.xml* and put below configuration. 
 	- We mention the Replication value here. We are setting this value to 1 (default is 3).
@@ -191,40 +191,40 @@ Now ssh is successfully configured.
 		- Name Node directory: stores metadata
 		- Data Node directory: stores actual blocks
 
->		<configuration> 
->		    <property> 
->		        <name>dfs.replication</name> 
->		        <value>1</value> 
->		    </property> 
->		    <property> 
->		     	<name>dfs.namenode.name.dir</name> 
->		     	<value>/home/amanpreet/hadoop-2.7.1/namenode</value> 
->		    </property> 
->		    <property> 
->		      	<name>dfs.datanode.data.dir</name> 
->		      	<value>/home/amanpreet/hadoop-2.7.1/datanode</value> 
->		    </property> 
->		</configuration>
+			>		<configuration> 
+			>		    <property> 
+			>		        <name>dfs.replication</name> 
+			>		        <value>1</value> 
+			>		    </property> 
+			>		    <property> 
+			>		     	<name>dfs.namenode.name.dir</name> 
+			>		     	<value>/home/amanpreet/hadoop-2.7.1/namenode</value> 
+			>		    </property> 
+			>		    <property> 
+			>		      	<name>dfs.datanode.data.dir</name> 
+			>		      	<value>/home/amanpreet/hadoop-2.7.1/datanode</value> 
+			>		    </property> 
+			>		</configuration>
 
 - Check *slaves.xml* file. Currently it has localhost in it. When there are multiple machines, then all machine names are put here
 
 - Edit *yarn-site.xml* file. Here we put configuration like what auxiliary services are required to be run by Node Manager. This is the shuffle service that needs to be set for MapReduce to run
 
->		<configuration> 
->		    <property> 
->		        <name>yarn.nodemanager.aux-services</name> 
->		        <value>mapreduce_shuffle</value> 
->		    </property> 
->		</configuration>
+	>		<configuration> 
+	>		    <property> 
+	>		        <name>yarn.nodemanager.aux-services</name> 
+	>		        <value>mapreduce_shuffle</value> 
+	>		    </property> 
+	>		</configuration>
 
 - Create *mapred-site.xml* from *mapred-site.xml.template*. This contains the name of the MapReduce framework we are using. As we are using Hadoop 2, we will put YARN (Yet Another Resource Negotiator) here
 
->		<configuration> 
->		    <property> 
->		        <name>mapreduce.framework.name</name> 
->		        <value>yarn</value> 
->		    </property> 
->		</configuration>
+	>		<configuration> 
+	>		    <property> 
+	>		        <name>mapreduce.framework.name</name> 
+	>		        <value>yarn</value> 
+	>		    </property> 
+	>		</configuration>
 
 - We will update the global *.bashrc* file to add the environment variables. Go to your home directory from Terminal. Add below lines in the *.bashrc* file.
 
@@ -263,15 +263,15 @@ Hadoop is configured successfully
 
 	> hadoop fs -put /home/amanpreet/data/firstfile /data
 
-You can now check datanode directory and it will contain two files. Location on my machine is 
+	You can now check datanode directory and it will contain two files. Location on my machine is 
 
-> /home/amanpreet/hadoop-2.7.1/datanode/current/BP-2072242420-127.0.1.1-1454419520821/current/finalized/subdir0/subdir0
+	> /home/amanpreet/hadoop-2.7.1/datanode/current/BP-2072242420-127.0.1.1-1454419520821/current/finalized/subdir0/subdir0
 
-blk_1073741825: this is the actual block where data is stored
+	blk_1073741825: this is the actual block where data is stored
 
-blk_1073741825_1001.meta: this contains the checksum information
+	blk_1073741825_1001.meta: this contains the checksum information
 
-![](Images/HC/27.png)
+	![](Images/HC/27.png)
 
 - Data is successfully written on HDFS
 
