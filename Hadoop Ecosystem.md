@@ -133,8 +133,12 @@ During Reduce Phase, below happens:
 
 The data is sorted and grouped based on the key and below output is generated. This output is fed to the Reduce method.
 
-Reduce method is executed and final output is written to HDFS.
-
 ![](Images/HE/7.png)
 
 ###### Figure 7 ######
+
+Reduce method is executed and final output is written to HDFS.
+
+![](Images/HE/8.png)
+
+###### Figure 8 ######
