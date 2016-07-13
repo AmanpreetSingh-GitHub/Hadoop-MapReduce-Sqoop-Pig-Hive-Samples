@@ -2,13 +2,13 @@
 
 This area contains resources related to Big Data and Hadoop.
 
-- Hadoop Ecosystem.docx: This document should be read as a basic guide to Hadoop ecosystem (with MapReduce as YARN Application)
+- Hadoop Ecosystem.md: This document should be read as a basic guide to Hadoop ecosystem (with MapReduce as YARN Application)
 
-- Hadoop Configuration for Installation.docx: This document contains detailed step-by-step information on Configuring Hadoop for Pseudo-Distribution Mode Installation
+- Hadoop Configuration for Installation.md: This document contains detailed step-by-step information on Configuring Hadoop for Pseudo-Distribution Mode Installation
 
-- First MapReduce project.docx: This document contains the first MapReduce project and basics of MapReduce Job
+- First MapReduce project.md: This document contains the first MapReduce project and basics of MapReduce Job
 
-- Second MapReduce project.docx: This document contains the second MapReduce project that uses KeyValueTextInputFormat
+- Second MapReduce project.md: This document contains the second MapReduce project that uses KeyValueTextInputFormat
 
 I am continuously adding more resources to this repository like:
 - documents
