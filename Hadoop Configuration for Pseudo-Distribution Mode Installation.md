@@ -36,65 +36,65 @@ Below steps uses Oracle VM VirtualBox and Linux Mint 17.2 (that is based on Ubun
 	- Select Linux for Type
 	- Select Ubuntu (64-bit) for Version
 
-![](Images/HC/1.png)
+		![](Images/HC/1.png)
 
 - Select Memory size as 4000MB
 
-![](Images/HC/2.png)
+	![](Images/HC/2.png)
 
 - Select Create a virtual hard disk now
 
-![](Images/HC/3.png)
+	![](Images/HC/3.png)
 
 - Select VDI (VirtualBox Disk Image)
 
-![](Images/HC/4.png)
+	![](Images/HC/4.png)
 
 - Select Dynamically allocated
 
-![](Images/HC/5.png)
+	![](Images/HC/5.png)
 
 - Select the amount of hard disk size
 
-![](Images/HC/6.png)
+	![](Images/HC/6.png)
 
 - Select the Linux Ubuntu Virtual Machine and click Start
 - Select the linuxmint-17.2-cinnamon-64bit ISO image and click Start
 
-![](Images/HC/7.png)
+	![](Images/HC/7.png)
 
 - We will get below interface
 
-![](Images/HC/8.png)
+	![](Images/HC/8.png)
 
 - Double click Install Linux Mint
 - Select English and Continue
 
-![](Images/HC/9.png)
+	![](Images/HC/9.png)
 
 - Select Continue
 
-![](Images/HC/10.png)
+	![](Images/HC/10.png)
 
 - Select Erase disk and install Linux Mint and click Install Now
 
-![](Images/HC/11.png)
+	![](Images/HC/11.png)
 
 - Click Continue
 
-![](Images/HC/12.png)
+	![](Images/HC/12.png)
 
 - Create Account and click Continue
 
-![](Images/HC/13.png)
+	![](Images/HC/13.png)
 
 - After installation finishes, we get below screen. Click on Restart Now
 
-![](Images/HC/14.png)
+	![](Images/HC/14.png)
 
 - Linux Mint 17.2 (based on Ubuntu 14.04) is installed on Oracle VM VirtualBox running in Windows OS
 
-![](Images/HC/15.png)
+	![](Images/HC/15.png)
 
 #### Installing Software ####
 
@@ -146,13 +146,13 @@ Once the key is generated, we need to configure the keys for a password-less sec
 
 	> cat id_rsa.pub >> authorized_keys
 
-![](Images/HC/21.png)
+	![](Images/HC/21.png)
 
 - Below command will add localhost to the list of trusted known hosts. Right now we have only one machine (localhost), so run below command to put localhost as the known host:
 
 	> ssh localhost
 
-![](Images/HC/22.png)
+	![](Images/HC/22.png)
 
 We get below output after running the command.
 
@@ -172,7 +172,7 @@ Now ssh is successfully configured.
 
 - Extract that setup in your home directory. After this is done, below steps are required for configuring Hadoop.
 
-![](Images/HC/25.png)
+	![](Images/HC/25.png)
 
 - In the extracted folder hadoop-2.7.1, go to *etc > Hadoop*
 - Edit core-site.xml file and put below configuration. This file contains the *Name Node* configuration like the address and port it runs on
@@ -252,7 +252,7 @@ Hadoop is configured successfully
 
 - Once the *namenode* is formatted, we can start the services from */home/amanpreet/hadoop-2.7.1/sbin/start-all.sh*
 
-![](Images/HC/26.png)
+	![](Images/HC/26.png)
 
 - Create a directory in HDFS to store data using below command
 
