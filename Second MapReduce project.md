@@ -19,8 +19,8 @@ In this project, we will use another input format in MapReduce – *KeyValueText
 
 		Value – *name,age,score*
 
-	- Next is to create the bare-bone or bare minimum code structure for our MapReduce project (refer First *MapReduce* project).
-		- We will name our package *keyvalue*
+- Next is to create the bare-bone or bare minimum code structure for our MapReduce project (refer First *MapReduce* project).
+	- We will name our package *keyvalue*
 
 - Set the properties in *Driver* class, see below
 	- Create Configuration object so as to use keyvalueinputtextformat
