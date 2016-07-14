@@ -19,39 +19,39 @@ We will first create a bare-bone or bare minimum code for any MapReduce project.
 
 - In eclipse, go to New Project and select *Map/reduce Project*
 
-![](Images/FMRP/2.png)
-###### Figure 2 ######
+	![](Images/FMRP/2.png)
+	###### Figure 2 ######
 
 - We will name the project *MapReduce* and *Specify Hadoop library location* to the location where we extracted Hadoop (*/home/amanpreet4420/hadoop-2.7.1*) and click *Finish*. Click Yes to the pop-up that comes.
 
-![](Images/FMRP/3.png)
-###### Figure 3 ######
+	![](Images/FMRP/3.png)
+	###### Figure 3 ######
 
 - Now we will create a package in the project. By selecting the *MapReduce* project, right-click *New->Package* and name *wordcount*
 
-![](Images/FMRP/4.png)
-###### Figure 4 ######
+	![](Images/FMRP/4.png)
+	###### Figure 4 ######
 
 - Now we will create a class in the package. By selecting the package *wordcount*, right-click *New->Class* and name it *Map*. In the Superclass, select *org.apache.hadoop.mapreduce.Mapper<KEYIN, VALUEIN, KEYOUT, VALUEOUT>*
 
 	- This class will contain the Mapper code
 
-![](Images/FMRP/5.png)
-###### Figure 5 ######
+		![](Images/FMRP/5.png)
+		###### Figure 5 ######
 
 - We will create another class in the package. By selecting the package *wordcount*, right-click *New->Class* and name it *Reduce*. In the Superclass, select *org.apache.hadoop.mapreduce.Reducer<KEYIN, VALUEIN, KEYOUT, VALUEOUT>*.
 
 	- This class will contain the Reducer code.
 
-![](Images/FMRP/6.png)
-###### Figure 6 ######
+		![](Images/FMRP/6.png)
+		###### Figure 6 ######
 
 - We will create another class in the package. By selecting the package *wordcount*, right-click *New->Class* and name it *Driver*. In the Superclass, select *org.apache.hadoop.conf.Configured*. In the Interfaces, select *org.apache.hadoop.util.Tool*. As this class will be the driver for our MapReduce program, we will select *public static void main(String[] args)* checkbox
 
 	This will be the driver class for our MapReduce program. Also this class will contain the configuration for our MapReduce program. Here we will set the properties for the Job
 
-![](Images/FMRP/7.png)
-###### Figure 7 ######
+	![](Images/FMRP/7.png)
+	###### Figure 7 ######
 
 Now we have set up the bare minimum code required for any MapReduce project.
 
@@ -75,8 +75,8 @@ Now we have set up the bare minimum code required for any MapReduce project.
 - Here we will pause and consider our Use Case.
 	- Let’s create a file *fifa* that will contain the unstructured data in each row. Contents of the file is below:
 
-![](Images/FMRP/8.png)
-###### Figure 8 ######
+		![](Images/FMRP/8.png)
+		###### Figure 8 ######
 
 	- Use Case
 		- Count the number of times each country has appeared
@@ -232,7 +232,11 @@ Now we have set up the bare minimum code required for any MapReduce project.
 
 - Now is the time to run our MapReduce program
 	- Right-click on the package, *wordcount*, click Export
-	- Select *JAR* file, select location where JAR file is stored and name the JAR file. Click *Finish* (see Figure 9 below)
+	- Select *JAR* file, select location where JAR file is stored and name the JAR file. Click *Finish*
+
+		![](Images/FMRP/9.png)
+		###### Figure 9 ######
+
 	- Start the Hadoop services using 
 		> /home/amanpreet4420/hadoop-2.7.1/sbin/start-all.sh.
 
@@ -243,7 +247,10 @@ Now we have set up the bare minimum code required for any MapReduce project.
 		> hadoop fs -put /home/amanpreet4420/data/fifa /datafifa
 
 	- Execute the MapReduce Job using
-		> hadoop jar /home/amanpreet4420/MapReduceJARs/wordcount.jar wordcount.Driver /datafifa/fifa /wordcount  (see Figure 10 below)
+		> hadoop jar /home/amanpreet4420/MapReduceJARs/wordcount.jar wordcount.Driver /datafifa/fifa /wordcount
+		
+		![](Images/FMRP/10.png)
+		###### Figure 10 ######
 
 		- */home/amanpreet4420/MapReduceJARs/wordcount.jar*: Location of jar file
 		- *wordcount.Driver*: Package name and Driver class name, from here we set the value of property job.setJarByClass(getClass()) in the Driver class
@@ -255,13 +262,7 @@ Now we have set up the bare minimum code required for any MapReduce project.
 		- part-r-00000: this is the files containing the final output.
 			- Note that there is just one file created, as the number of reducer is 1
 
-	- Content of part-r-00000 file are below  (see Figure 11 below):
+	- Content of part-r-00000 file are below:
 
-![](Images/FMRP/9.png)
-###### Figure 9 ######
-
-![](Images/FMRP/10.png)
-###### Figure 10 ######
-
-![](Images/FMRP/11.png)
-###### Figure 11 ######
+		![](Images/FMRP/11.png)
+		###### Figure 11 ######
