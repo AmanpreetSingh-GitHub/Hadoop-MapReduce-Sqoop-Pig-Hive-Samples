@@ -11,17 +11,17 @@
 		>
 		> m,Amanpreet,20,99
 
-	- Input to mapper
+		- Input to mapper
 	
-		> key – gender
+			> key – gender
 			
-		> value - Albert,31,77
+			> value - Albert,31,77
 
-	- Output from mapper
+		- Output from mapper
 
-		> key – gender
+			> key – gender
 
-		> value – 31,77
+			> value – 31,77
 
 	- Also, we assume below logic for Partition
 		- <= 20
