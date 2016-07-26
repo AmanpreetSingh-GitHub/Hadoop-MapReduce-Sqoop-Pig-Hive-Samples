@@ -159,4 +159,4 @@
 
 	- Content of the three files are below. The output is based on our Custom Partitioner logic:
 	
-		![](Images/SMRP/3.png)
+		![](Images/TMRP/3.png)
