@@ -33,7 +33,7 @@ Next I am working on (will share the documents and code shortly):
 
 This repository will help anyone with no Hadoop knowledge to be comfortable working with Hadoop.
 
-So please keep revisiting this space.
+So keep revisiting this space.
 
 Please send your comments or suggestions to my email.
 
