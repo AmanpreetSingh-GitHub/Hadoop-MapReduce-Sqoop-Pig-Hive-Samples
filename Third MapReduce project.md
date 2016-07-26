@@ -115,7 +115,7 @@
 
 - Now Reduce method will receive input like this:
 
-	> <m,{(33,77),(33,88),(20,99)}>
+		> <m,{(33,77),(33,88),(20,99)}>
 
 - Reduce class changes based on our Use Case is below:
 
