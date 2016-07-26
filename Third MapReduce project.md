@@ -99,7 +99,7 @@
 		>     	return 0;
 		>     }
 
-- Driver class remains same to Driver class from *Second MapReduce *project using *KeyValueTextInputFormat* project, with few additions below:
+- Driver class remains same to Driver class from *Second MapReduce* project using *KeyValueTextInputFormat* project, with few additions below:
 
 	- Set Number of Reducers to 3
 
