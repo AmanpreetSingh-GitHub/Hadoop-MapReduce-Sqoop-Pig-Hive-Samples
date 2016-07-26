@@ -10,6 +10,18 @@ This area contains resources related to Big Data and Hadoop.
 
 - Second MapReduce project.md: This document contains the second MapReduce project that uses KeyValueTextInputFormat
 
+- Third MapReduce project.md: This document contains our third MapReduce project that uses Custom Partitioner
+
+- Fourth MapReduce project.md: This document contains our fourth MapReduce project that uses Custom Data Types
+
+- Fifth MapReduce project.md: This document contains our fifth MapReduce project without Reducers
+
+- MapReduce folder: This folder contains the necessary source code files (in Java) for our MapReduce projects
+
+- Sqoop-Pig-Hive project1.md: This document contains an end-to-end project using Sqoop, Pig and Hive along with explaining their architecture
+
+- SqoopPigHive_Project1: This folder contains necessary Data files and Script files related to "Sqoop-Pig-Hive project1" project
+
 I am continuously adding more resources to this repository like:
 - documents
 - code files
@@ -17,11 +29,7 @@ I am continuously adding more resources to this repository like:
 - and more
 
 Next I am working on (will share the documents and code shortly):
-- MapReduce project that uses Custom Partitioner
-- MapReduce project that uses Custom Data Types
-- MapReduce project without Reducers
-- An End-to-end project using Sqoop, Pig and Hive along with explaining their architecture
-- And setting up Hadoop cluster in fully distributed mode
+- Setting up Hadoop cluster in fully distributed mode
 
 This repository will help anyone with no Hadoop knowledge to be comfortable working with Hadoop.
 
